@@ -221,6 +221,49 @@ module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f
 
 /***/ }),
 
+/***/ "./pages/About.jsx":
+/*!*************************!*\
+  !*** ./pages/About.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/About.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var aboutStyle = "\n.about-container {\n  margin-top: 100px;\n}\n\n.title {\n  font-size: 40px;\n  font-weight: 700;\n}\n";
+
+var About = function About() {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "About Me"), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, aboutStyle));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
 /***/ "./pages/Buttons.jsx":
 /*!***************************!*\
   !*** ./pages/Buttons.jsx ***!
@@ -288,6 +331,43 @@ var Buttons = function Buttons(_ref) {
 
 /***/ }),
 
+/***/ "./pages/Footer.jsx":
+/*!**************************!*\
+  !*** ./pages/Footer.jsx ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Footer.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var footerStyle = "\n.container {\n  width: 100%;\n  height: 250px;\n  background: rgba(0,0,255, 1);\n}\n";
+
+var Footer = function Footer() {
+  return __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Footer", __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, footerStyle));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./pages/Header.jsx":
 /*!**************************!*\
   !*** ./pages/Header.jsx ***!
@@ -304,7 +384,7 @@ var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/He
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var style = "\n.header {\n  height: 95vh;\n  width: 100%;\n  background:  \n    linear-gradient(9deg, rgb(225,225,225) 140px, rgba(0,0,0,0) 20px), \n    linear-gradient(-9deg, rgb(225,225,225) 140px, rgba(0,0,0,0) 20px), \n    linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),\n    linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),\n    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%),\n    url(https://media.giphy.com/media/ZcdJJvDqTgdGZK8Xd3/giphy.gif) repeat center;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.name {\n  font-size: 60px;\n  font-weight: 700;\n}\n\n.info {\n  color: white;\n  margin: 0px;\n}\n\n.btn-container {\n  display: flex;\n  width: 60%;\n  max-width: 600px;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n}\n";
+var style = "\n.header {\n  height: 95vh;\n  width: 100%;\n  background:  \n    linear-gradient(9deg, rgb(225,225,225) 150px, rgba(0,0,0,0) 20px), \n    linear-gradient(-9deg, rgb(225,225,225) 150px, rgba(0,0,0,0) 20px), \n    linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),\n    linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),\n    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%),\n    url(https://media.giphy.com/media/ZcdJJvDqTgdGZK8Xd3/giphy.gif) repeat center;\n  background-size: cover;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.name {\n  font-size: 60px;\n  font-weight: 700;\n}\n\n.info {\n  color: white;\n  margin: 0px;\n}\n\n.btn-container {\n  display: flex;\n  width: 60%;\n  max-width: 600px;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-top: 20px;\n}\n";
 var portfolioButtons = [{
   name: 'LinkedIn',
   logoPath: 'M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z',
@@ -382,14 +462,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/Header.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./pages/Footer.jsx");
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* eslint-disable react/prop-types */
 
 
+
 var layoutStyle = {
-  padding: 20,
   border: '1px solid #DDD',
   backgroundColor: '#e1e1e1',
   fontFamily: 'Montserrat, sans-serif',
@@ -411,7 +492,13 @@ var Layout = function Layout(_ref) {
       lineNumber: 15
     },
     __self: this
-  }), children);
+  }), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
@@ -432,128 +519,117 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/ProjectCard.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-var cardStyle = "\n*,\n*:before,\n*:after{\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n  outline: 1px solid transparent;\n}\n\n.card{\n  width: 320px;\n  height: 450px;\n  position: relative;\n  transform-style: preserve-3d;\n  transform: translateZ(-140px);\n  transition: transform 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  cursor: pointer;\n}\n\n.card > div{\n  position: absolute;\n  width: 320px;\n  height: 450px;\n  padding: 34px 21px;\n  transition: all 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n}\n\n.front{\n  background-image: linear-gradient(180deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);\n  transform: rotateY(0deg) translateZ(160px); \n  border-radius: 34px 3px 0 0;\n}\n\n.right{ \n  background-image: linear-gradient(0deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);\n  opacity: 0.08;\n  transform: rotateY(90deg) translateZ(160px);\n  border-radius: 0 0 3px 34px;\n}\n\n.card:hover{\n  transform: translateZ(-160px) rotateY( -90deg);\n}\n\n.card:hover .front{\n  opacity: 0; \n}\n\n.card:hover .right{\n  opacity: 1; \n}\n\nh1,h2{\n  margin: 0;\n  font-size: 38px;\n  letter-spacing: -.25px;\n  transform: translateX(-44px);\n  font-family: 'Sarala'; \n  font-weight: 700;\n}\n\nh2{\n  font-size: 21px;\n  transform: translateX(-34px);\n}\n\np{\n  margin: 0;\n  font-weight: 300;\n  font-size: 16px;\n}\n\nspan{\n  margin-left: 13px;\n  opacity: .55;\n}\n\nimg{\n  transform-origin: top right;\n  transition: transform 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  transition-delay: 100ms;\n  transform: translateX(21%) rotateZ(13deg) skewX(3deg);\n  pointer-events: none;\n}\n\n.img-wrapper{\n  animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;\n  position: relative;\n  top: -420px; right: -100px;\n  pointer-events: none;\n  backface-visibility: hidden;\n}\n\n@keyframes float{\n  0%{\n    transform: translateZ(20px);\n  }\n  100%{\n    transform: translateY(-21px) translateX(-13px) translateZ(30px);\n  }\n}\n\n.card:hover ~ .img-wrapper img{\n  transform: scale(0.9) translateX(47%) translateY(90%) rotateZ(80deg);\n}\n\nul{\n  margin-left: 21px;\n  padding: 0;\n  font-size: 16px;\n  font-weight: 300;\n  list-style: none;\n}\n\nli{\n  padding-bottom: 8px;\n  position: relative;\n}\n\nli:before{\n  content: 'x';\n  position: absolute;\n  left: -21px;\n  opacity: .55;\n}\n\nbutton{\n  position: absolute;\n  right: 21px; \n  bottom: 34px;\n  border: none;\n  box-shadow: none;\n  background: none;\n  color: inherit;\n  font-family: 'Exo 2';\n  font-weight: 300;\n  font-size: 15px;  \n  letter-spacing: -.25px;\n  font-weight: 700;\n  padding: 13px 34px;\n  border-radius: 55px;\n  background-image: linear-gradient(130deg, rgba(117,51,165,1)  50%, rgba(51,46,57,.89) 100%);\n  background-size: 125% 100%;\n  background-position: right;\n  cursor: pointer;\n  box-shadow: 8px 5px 13px rgba(34,34,34,.08);\n  transform: scale(0) skewY(13deg);\n  transition: all 150ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  transform-origin: right bottom;\n}\n\n.card:hover button{\n  transform: scale(1) skewY(0);\n}\n\n.card:not(:hover) button{\n  opacity: 0;\n}\n\nbutton:hover{\n  background-position: left;\n}\n\n.price{\n  position: absolute;\n  bottom: 34px;\n  left: 21px;\n  font-size: 34px;\n  opacity: .34;\n}\n\n@keyframes fadeIn{\n  0%{\n    opacity: 0.33;\n    transform: scale(.89);\n  }\n}\n\n@media only screen and (max-width: 600px){\n  body{\n    transform: scale(.67);\n  }\n}\n";
+/* eslint-disable react/prop-types */
 
-var ProjectCard = function ProjectCard() {
+var cardStyle = "\n*,\n*:before,\n*:after{\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: rgba(255,255,255,0);\n  outline: 1px solid transparent;\n}\n\n.card{\n  width: 320px;\n  height: 450px;\n  position: relative;\n  transform-style: preserve-3d;\n  transform: translateZ(-140px);\n  transition: transform 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  cursor: pointer;\n}\n\n.card > div{\n  position: absolute;\n  width: 320px;\n  height: 450px;\n  padding: 34px 21px;\n  transition: all 350ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n}\n\n.front{\n  transform: rotateY(0deg) translateZ(160px); \n  border-radius: 34px 3px 0 0;\n  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);\n}\n\n.right{ \n  background-image: linear-gradient(0deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);\n  opacity: 0.08;\n  transform: rotateY(90deg) translateZ(160px);\n  border-radius: 0 0 3px 34px;\n  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);\n}\n\n.card:hover{\n  transform: translateZ(-160px) rotateY( -90deg);\n}\n\n.card:hover .front{\n  opacity: 0; \n}\n\n.card:hover .right{\n  opacity: 1; \n}\n\nh1,h2{\n  margin: 0;\n  font-size: 32px;\n  letter-spacing: -.25px;\n  transform: translateX(-44px);\n  font-weight: 700;\n}\n\nh2{\n  font-size: 21px;\n  transform: translateX(-34px);\n}\n\np{\n  margin: 0;\n  font-weight: 300;\n  font-size: 16px;\n}\n\nspan{\n  margin-left: 13px;\n  opacity: .55;\n}\n\nimg{\n  transform-origin: top right;\n  transition: transform 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  transition-delay: 100ms;\n  transform: translateX(21%) rotateZ(13deg) skewX(3deg);\n  pointer-events: none;\n}\n\n.img-wrapper{\n  animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;\n  position: relative;\n  top: -420px; right: -120px;\n  pointer-events: none;\n  backface-visibility: hidden;\n}\n\n@keyframes float{\n  0%{\n    transform: translateZ(20px);\n  }\n  100%{\n    transform: translateY(-21px) translateX(-13px) translateZ(30px);\n  }\n}\n\n.card:hover ~ .img-wrapper img{\n  transform: scale(0.9) translateX(-40%) translateY(170%) rotateZ(80deg);\n}\n\nul{\n  margin-left: 21px;\n  padding: 0;\n  font-size: 16px;\n  font-weight: 300;\n  list-style: none;\n}\n\nli{\n  padding-bottom: 8px;\n  position: relative;\n}\n\nli:before{\n  content: 'x';\n  position: absolute;\n  left: -21px;\n  opacity: .55;\n}\n\nbutton{\n  position: absolute;\n  right: 21px; \n  bottom: 34px;\n  border: none;\n  box-shadow: none;\n  background: none;\n  color: inherit;\n  font-weight: 300;\n  font-size: 15px;  \n  letter-spacing: -.25px;\n  font-weight: 700;\n  padding: 13px 34px;\n  border-radius: 55px;\n  background-image: linear-gradient(130deg, rgba(117,51,165,1)  50%, rgba(51,46,57,.89) 100%);\n  background-size: 125% 100%;\n  background-position: right;\n  cursor: pointer;\n  box-shadow: 8px 5px 13px rgba(34,34,34,.08);\n  transform: scale(0) skewY(13deg);\n  transition: all 150ms cubic-bezier(0.390, 0.575, 0.565, 1.000);\n  transform-origin: right bottom;\n}\n\n.card:hover button{\n  transform: scale(1) skewY(0);\n}\n\n.card:not(:hover) button{\n  opacity: 0;\n}\n\nbutton:hover{\n  background-position: left;\n}\n\n.price{\n  position: absolute;\n  bottom: 34px;\n  left: 21px;\n  font-size: 34px;\n  opacity: .34;\n}\n\n@keyframes fadeIn{\n  0%{\n    opacity: 0.33;\n    transform: scale(.89);\n  }\n}\n\n@media only screen and (max-width: 600px){\n  body{\n    transform: scale(.67);\n  }\n}\n\n.flip-image {\n  height: 200px;\n";
+
+var ProjectCard = function ProjectCard(_ref) {
+  var projectInfo = _ref.projectInfo;
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 193
     },
     __self: this
   }, __jsx("div", {
     className: "card",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 194
     },
     __self: this
   }, __jsx("div", {
     className: "front",
+    style: {
+      backgroundImage: "linear-gradient(180deg, ".concat(projectInfo.color, " 0%, rgba(92,91,94,0) 100%)")
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 195
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 196
     },
     __self: this
-  }, "Signature"), __jsx("p", {
+  }, projectInfo.name), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 197
     },
     __self: this
   }, "7.7 deck", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 197
     },
     __self: this
   }, "2018")), __jsx("p", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 198
     },
     __self: this
   }, "$ 89.00")), __jsx("div", {
     className: "right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 197
+    style: {
+      backgroundImage: "linear-gradient(180deg, rgba(225,225,225,1) 0%, ".concat(projectInfo.color, " 100%)")
     },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: this
-  }, "Signature"), __jsx("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: this
-  }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 200
     },
     __self: this
-  }, "Width 7.7\""), __jsx("li", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 201
     },
     __self: this
-  }, "Length 31.75\""), __jsx("li", {
+  }, projectInfo.name), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 202
     },
     __self: this
-  }, "Wheelbase 14\""), __jsx("li", {
+  }, projectInfo.technologies.map(function (technology) {
+    return __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 204
+      },
+      __self: this
+    }, technology);
+  })), __jsx("button", {
+    type: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203
-    },
-    __self: this
-  }, "Nose 6.875\""), __jsx("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 204
-    },
-    __self: this
-  }, "Tail 6.25\"")), __jsx("button", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 207
     },
     __self: this
   }, "Source Code"))), __jsx("div", {
     className: "img-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 210
     },
     __self: this
   }, __jsx("img", {
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/577128/deck.png",
-    alt: "",
+    src: projectInfo.longThing,
+    alt: projectInfo.name,
+    className: "flip-image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 211
     },
     __self: this
   })), __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 213
     },
     __self: this
   }, cardStyle));
@@ -579,46 +655,68 @@ var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Pr
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var aboutStyle = "\n.about-container {\n  margin-top: 100px;\n}\n\n.title {\n  font-size: 40px;\n  font-weight: 700;\n}\n\n.cards-container {\n  display: flex;\n  justify-content: space-evenly;\n}\n";
-var projects = [];
+var projectStyle = "\n.projects-container {\n  margin-top: 100px;\n}\n\n.title {\n  font-size: 40px;\n  font-weight: 700;\n}\n\n.cards-container {\n  display: flex;\n  justify-content: space-evenly;\n  flex-wrap: wrap;\n}\n";
+var projects = [{
+  name: 'Big Tuna',
+  description: 'House Tour Scheduling Application',
+  color: '#42f5ef',
+  githubLink: '',
+  longThing: '/house-key.png',
+  technologies: ['React', 'Styled-Components', 'Docker', 'Express | NodeJS, MySQL']
+}, {
+  name: 'Bon-App-Etit',
+  description: 'Restaurant Reservation Service',
+  color: '#915ce6',
+  githubLink: '',
+  longThing: '/utensil.png',
+  technologies: ['AWS EC2', 'NGINX', 'Express | NodeJS', 'Docker', 'PostgreSQL']
+}, {
+  name: 'What2Cook',
+  description: 'Recipe Generator Application',
+  color: '#3bd950',
+  githubLink: '',
+  longThing: '/spatula.png',
+  technologies: ['Vue', 'CSS', 'Express | NodeJS', 'MongoDB']
+}];
 
 var Projects = function Projects() {
   return __jsx("div", {
-    className: "about-container",
+    className: "projects-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 50
     },
     __self: this
   }, __jsx("div", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 51
     },
     __self: this
-  }, "About Me"), __jsx("div", {
+  }, "Projects"), __jsx("div", {
     className: "cards-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 52
     },
     __self: this
-  }, [1, 2, 3].map(function (card) {
+  }, projects.map(function (card) {
     return __jsx(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      projectInfo: card,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 54
       },
       __self: this
     });
   }), __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 55
     },
     __self: this
-  }, aboutStyle)));
+  }, projectStyle)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
@@ -643,7 +741,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.jsx");
-/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Projects */ "./pages/Projects.jsx");
+/* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./About */ "./pages/About.jsx");
+/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Projects */ "./pages/Projects.jsx");
 
 
 
@@ -651,6 +750,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
 
 
 
@@ -674,13 +774,19 @@ var index = /*#__PURE__*/function (_Component) {
       return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 15
         },
         __self: this
-      }, __jsx(_Projects__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }, __jsx(_About__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 16
+        },
+        __self: this
+      }), __jsx(_Projects__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
         },
         __self: this
       }));

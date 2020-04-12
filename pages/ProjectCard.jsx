@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const cardStyle = `
@@ -28,9 +29,9 @@ const cardStyle = `
 }
 
 .front{
-  background-image: linear-gradient(180deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);
   transform: rotateY(0deg) translateZ(160px); 
   border-radius: 34px 3px 0 0;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);
 }
 
 .right{ 
@@ -38,6 +39,7 @@ const cardStyle = `
   opacity: 0.08;
   transform: rotateY(90deg) translateZ(160px);
   border-radius: 0 0 3px 34px;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);
 }
 
 .card:hover{
@@ -54,10 +56,9 @@ const cardStyle = `
 
 h1,h2{
   margin: 0;
-  font-size: 38px;
+  font-size: 32px;
   letter-spacing: -.25px;
   transform: translateX(-44px);
-  font-family: 'Sarala'; 
   font-weight: 700;
 }
 
@@ -88,7 +89,7 @@ img{
 .img-wrapper{
   animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
   position: relative;
-  top: -420px; right: -100px;
+  top: -420px; right: -120px;
   pointer-events: none;
   backface-visibility: hidden;
 }
@@ -103,7 +104,7 @@ img{
 }
 
 .card:hover ~ .img-wrapper img{
-  transform: scale(0.9) translateX(47%) translateY(90%) rotateZ(80deg);
+  transform: scale(0.9) translateX(-40%) translateY(170%) rotateZ(80deg);
 }
 
 ul{
@@ -134,7 +135,6 @@ button{
   box-shadow: none;
   background: none;
   color: inherit;
-  font-family: 'Exo 2';
   font-weight: 300;
   font-size: 15px;  
   letter-spacing: -.25px;
@@ -183,36 +183,36 @@ button:hover{
     transform: scale(.67);
   }
 }
+
+.flip-image {
+  height: 200px;
 `;
 
-const ProjectCard = () => {
+const ProjectCard = ({ projectInfo }) => {
   return (
     <div>
       <div className="card">
-        <div className="front">
-          <h1>Signature</h1>
+        <div className="front" style={{ backgroundImage: `linear-gradient(180deg, ${projectInfo.color} 0%, rgba(92,91,94,0) 100%)` }}>
+          <h1>{projectInfo.name}</h1>
           <p>7.7 deck<span>2018</span></p>
           <p className="price">$ 89.00</p>
         </div>
-        <div className="right">
-          <div>Signature</div>
+        <div className="right" style={{ backgroundImage: `linear-gradient(180deg, rgba(225,225,225,1) 0%, ${projectInfo.color} 100%)` }}>
+          <h1>{projectInfo.name}</h1>
           <ul>
-            <li>Width 7.7"</li>
-            <li>Length 31.75"</li>
-            <li>Wheelbase	14"</li>
-            <li>Nose	6.875"</li>
-            <li>Tail	6.25"</li>
+            {projectInfo.technologies.map((technology) => (
+              <li>{technology}</li>
+            ))}
           </ul>
-          <button>Source Code</button>
+          <button type="button">Source Code</button>
         </div>
       </div>
       <div className="img-wrapper">
-        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/577128/deck.png' alt='' />
+        <img src={projectInfo.longThing} alt={projectInfo.name} className="flip-image" />
       </div>
       <style>{cardStyle}</style>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectCard;
-

@@ -93,6 +93,58 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./pages/About.jsx":
+/*!*************************!*\
+  !*** ./pages/About.jsx ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/About.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const aboutStyle = `
+.about-container {
+  margin-top: 100px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+}
+`;
+
+const About = () => {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, "About Me"), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, aboutStyle));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
 /***/ "./pages/Buttons.jsx":
 /*!***************************!*\
   !*** ./pages/Buttons.jsx ***!
@@ -190,6 +242,49 @@ const Buttons = ({
 
 /***/ }),
 
+/***/ "./pages/Footer.jsx":
+/*!**************************!*\
+  !*** ./pages/Footer.jsx ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Footer.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const footerStyle = `
+.container {
+  width: 100%;
+  height: 250px;
+  background: rgba(0,0,255, 1);
+}
+`;
+
+const Footer = () => {
+  return __jsx("div", {
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Footer", __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }, footerStyle));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
 /***/ "./pages/Header.jsx":
 /*!**************************!*\
   !*** ./pages/Header.jsx ***!
@@ -211,8 +306,8 @@ const style = `
   height: 95vh;
   width: 100%;
   background:  
-    linear-gradient(9deg, rgb(225,225,225) 140px, rgba(0,0,0,0) 20px), 
-    linear-gradient(-9deg, rgb(225,225,225) 140px, rgba(0,0,0,0) 20px), 
+    linear-gradient(9deg, rgb(225,225,225) 150px, rgba(0,0,0,0) 20px), 
+    linear-gradient(-9deg, rgb(225,225,225) 150px, rgba(0,0,0,0) 20px), 
     linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%),
@@ -318,14 +413,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/Header.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./pages/Footer.jsx");
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* eslint-disable react/prop-types */
 
 
+
 const layoutStyle = {
-  padding: 20,
   border: '1px solid #DDD',
   backgroundColor: '#e1e1e1',
   fontFamily: 'Montserrat, sans-serif',
@@ -347,7 +443,13 @@ const Layout = ({
     lineNumber: 15
   },
   __self: undefined
-}), children);
+}), children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}));
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
@@ -366,6 +468,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/ProjectCard.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* eslint-disable react/prop-types */
 
 const cardStyle = `
 *,
@@ -395,9 +499,9 @@ const cardStyle = `
 }
 
 .front{
-  background-image: linear-gradient(180deg, rgba(145,141,144,1) 0%, rgba(92,91,94,0) 100%);
   transform: rotateY(0deg) translateZ(160px); 
   border-radius: 34px 3px 0 0;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);
 }
 
 .right{ 
@@ -405,6 +509,7 @@ const cardStyle = `
   opacity: 0.08;
   transform: rotateY(90deg) translateZ(160px);
   border-radius: 0 0 3px 34px;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);
 }
 
 .card:hover{
@@ -421,10 +526,9 @@ const cardStyle = `
 
 h1,h2{
   margin: 0;
-  font-size: 38px;
+  font-size: 32px;
   letter-spacing: -.25px;
   transform: translateX(-44px);
-  font-family: 'Sarala'; 
   font-weight: 700;
 }
 
@@ -455,7 +559,7 @@ img{
 .img-wrapper{
   animation: float 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate;
   position: relative;
-  top: -420px; right: -100px;
+  top: -420px; right: -120px;
   pointer-events: none;
   backface-visibility: hidden;
 }
@@ -470,7 +574,7 @@ img{
 }
 
 .card:hover ~ .img-wrapper img{
-  transform: scale(0.9) translateX(47%) translateY(90%) rotateZ(80deg);
+  transform: scale(0.9) translateX(-40%) translateY(170%) rotateZ(80deg);
 }
 
 ul{
@@ -501,7 +605,6 @@ button{
   box-shadow: none;
   background: none;
   color: inherit;
-  font-family: 'Exo 2';
   font-weight: 300;
   font-size: 15px;  
   letter-spacing: -.25px;
@@ -550,128 +653,117 @@ button:hover{
     transform: scale(.67);
   }
 }
+
+.flip-image {
+  height: 200px;
 `;
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  projectInfo
+}) => {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 193
     },
     __self: undefined
   }, __jsx("div", {
     className: "card",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 191
+      lineNumber: 194
     },
     __self: undefined
   }, __jsx("div", {
     className: "front",
+    style: {
+      backgroundImage: `linear-gradient(180deg, ${projectInfo.color} 0%, rgba(92,91,94,0) 100%)`
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 195
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 196
     },
     __self: undefined
-  }, "Signature"), __jsx("p", {
+  }, projectInfo.name), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 197
     },
     __self: undefined
   }, "7.7 deck", __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 194
+      lineNumber: 197
     },
     __self: undefined
   }, "2018")), __jsx("p", {
     className: "price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 198
     },
     __self: undefined
   }, "$ 89.00")), __jsx("div", {
     className: "right",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 197
+    style: {
+      backgroundImage: `linear-gradient(180deg, rgba(225,225,225,1) 0%, ${projectInfo.color} 100%)`
     },
-    __self: undefined
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: undefined
-  }, "Signature"), __jsx("ul", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: undefined
-  }, __jsx("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 200
     },
     __self: undefined
-  }, "Width 7.7\""), __jsx("li", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 201
     },
     __self: undefined
-  }, "Length 31.75\""), __jsx("li", {
+  }, projectInfo.name), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 202
     },
     __self: undefined
-  }, "Wheelbase 14\""), __jsx("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 203
-    },
-    __self: undefined
-  }, "Nose 6.875\""), __jsx("li", {
+  }, projectInfo.technologies.map(technology => __jsx("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 204
     },
     __self: undefined
-  }, "Tail 6.25\"")), __jsx("button", {
+  }, technology))), __jsx("button", {
+    type: "button",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 207
     },
     __self: undefined
   }, "Source Code"))), __jsx("div", {
     className: "img-wrapper",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 210
     },
     __self: undefined
   }, __jsx("img", {
-    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/577128/deck.png",
-    alt: "",
+    src: projectInfo.longThing,
+    alt: projectInfo.name,
+    className: "flip-image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 211
     },
     __self: undefined
   })), __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 213
     },
     __self: undefined
   }, cardStyle));
@@ -697,8 +789,8 @@ var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/Pr
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const aboutStyle = `
-.about-container {
+const projectStyle = `
+.projects-container {
   margin-top: 100px;
 }
 
@@ -710,45 +802,68 @@ const aboutStyle = `
 .cards-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 `;
-const projects = [];
+const projects = [{
+  name: 'Big Tuna',
+  description: 'House Tour Scheduling Application',
+  color: '#42f5ef',
+  githubLink: '',
+  longThing: '/house-key.png',
+  technologies: ['React', 'Styled-Components', 'Docker', 'Express | NodeJS, MySQL']
+}, {
+  name: 'Bon-App-Etit',
+  description: 'Restaurant Reservation Service',
+  color: '#915ce6',
+  githubLink: '',
+  longThing: '/utensil.png',
+  technologies: ['AWS EC2', 'NGINX', 'Express | NodeJS', 'Docker', 'PostgreSQL']
+}, {
+  name: 'What2Cook',
+  description: 'Recipe Generator Application',
+  color: '#3bd950',
+  githubLink: '',
+  longThing: '/spatula.png',
+  technologies: ['Vue', 'CSS', 'Express | NodeJS', 'MongoDB']
+}];
 
 const Projects = () => {
   return __jsx("div", {
-    className: "about-container",
+    className: "projects-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 50
     },
     __self: undefined
   }, __jsx("div", {
     className: "title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 51
     },
     __self: undefined
-  }, "About Me"), __jsx("div", {
+  }, "Projects"), __jsx("div", {
     className: "cards-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 52
     },
     __self: undefined
-  }, [1, 2, 3].map(card => __jsx(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, projects.map(card => __jsx(_ProjectCard__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    projectInfo: card,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 54
     },
     __self: undefined
   })), __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 55
     },
     __self: undefined
-  }, aboutStyle)));
+  }, projectStyle)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
@@ -768,9 +883,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.jsx");
-/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Projects */ "./pages/Projects.jsx");
+/* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./About */ "./pages/About.jsx");
+/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Projects */ "./pages/Projects.jsx");
 var _jsxFileName = "/Users/markvgo/Documents/postHRwork/PersonalWebsite/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -784,13 +901,19 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       },
       __self: this
-    }, __jsx(_Projects__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_About__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
+      },
+      __self: this
+    }), __jsx(_Projects__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
       },
       __self: this
     }));
