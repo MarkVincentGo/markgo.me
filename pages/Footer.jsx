@@ -38,7 +38,7 @@ const Footer = ({ portfolioButtons }) => {
       <div className="footer-container">
         <div className="links left">
           {portfolioButtons.map((site) => (
-            <a className="footer-link" href={site.link}>{site.name}</a>))}
+            <a className="footer-link" target="_blank" rel="noreferrer noopener" href={site.link}>{site.name}</a>))}
         </div>
         <div className="links">
           <div>Site by MARK VINCENT GO</div>
