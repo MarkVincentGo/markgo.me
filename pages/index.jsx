@@ -83,7 +83,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour',
           longThing: '/house-key.png',
           technologies: ['React', 'Styled-Components', 'Docker', 'Express | NodeJS, MySQL'],
-          demo: '/FECDemo.gif',
+          demo: '/FECDemo.mp4',
         },
         {
           name: 'Bon-App-Etit',
@@ -101,7 +101,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/MarkVincentGo/What2Cook',
           longThing: '/spatula.png',
           technologies: ['Vue', 'CSS', 'Express | NodeJS', 'MongoDB'],
-          demo: '/MVPDemo.gif',
+          demo: '/MVPDemo.mp4',
         },
         {
           name: 'DomOnion',

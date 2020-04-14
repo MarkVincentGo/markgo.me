@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
@@ -24,6 +25,10 @@ const modalStyle = `
   color: black;
   box-shadow: 0px 0px 3px 2px rgba(20,20,20,0.4);
 }
+
+.video {
+  width: 100%;
+}
 `;
 
 const desktopSpecificStyles = `
@@ -42,6 +47,7 @@ const desktopSpecificStyles = `
 
 .project-image {
   width: 70%;
+  height: 100%;
 }
 
 .modal-right {
@@ -55,7 +61,8 @@ const desktopSpecificStyles = `
 
 const mobileSpecificStyles = `
 .modal-container: {
-  display: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -81,7 +88,13 @@ const ProjectModal = ({ selectedProject, closeProjectModal }) => {
   if (selectedProject) {
     return (
       <div className="modal-container">
-        <img className="modal-left project-image" alt="project-demo" src={selectedProject.demo.length ? selectedProject.demo : 'app-under-construction.jpg'} />
+        { selectedProject.demo.search(/\.mp4$/) > 0
+          ? (
+            <div className="modal-left project-image">
+              <video className="video" autoPlay loop muted playsinline><source src={selectedProject.demo} type="video/mp4" /></video>
+            </div>
+          )
+          : <img className="modal-left project-image" alt="project-demo" src={selectedProject.demo.length ? selectedProject.demo : 'app-under-construction.jpg'} /> }
         <div className="modal-right">
           <div>This is my project</div>
           <a className="modal-button" href={selectedProject.githubLink} target="_blank" rel="noreferrer noopener">Source Code</a>

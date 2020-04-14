@@ -13,14 +13,14 @@ const footerStyle = `
   background-size: cover;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 30px;
 }
 
 .links {
   width: 40%;
-  border-top: 1px solid white;
   padding-top: 30px;
   display: flex;
   justify-content: space-evenly;
