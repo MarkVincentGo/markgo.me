@@ -148,6 +148,7 @@ export default class index extends Component {
     const {
       isModalOpen, selectedProject, socialMediaInfo, technologiesInfo, projectsInfo,
     } = this.state;
+
     return (
       <Layout portfolioButtons={socialMediaInfo}>
         <Modal

@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const cardStyle = `
+const desktopCardStyle = `
 *,
 *:before,
 *:after{
@@ -172,12 +172,6 @@ button:hover{
   }
 }
 
-@media only screen and (max-width: 600px){
-  body{
-    transform: scale(.67);
-  }
-}
-
 .flip-image {
   height: 150px;
   transform-origin: top right;
@@ -193,35 +187,148 @@ button:hover{
 }
 `;
 
+const mobileCardStyle = `
+.card{
+  width: 362px;
+  height: 568px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  flex: 0 0 34%;
+}
+
+.card > div{
+  width: 320px;
+  height: 500px;
+  padding: 34px 21px;
+}
+
+.front{
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.project-card-title {
+  margin-top: 50px;
+  font-size: 40px;
+  letter-spacing: -.25px;
+  font-weight: 700;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #777;
+}
+
+span{
+  margin-left: 13px;
+  opacity: .55;
+}
+
+ul{
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  list-style: none;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #777;
+}
+
+li{
+  font-size: 20px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+button{
+  position: absolute;
+  right: 21px; 
+  bottom: 34px;
+  border: none;
+  box-shadow: none;
+  background: none;
+  color: inherit;
+  font-weight: 300;
+  font-size: 15px;  
+  letter-spacing: -.25px;
+  padding: 13px 34px;
+  border-radius: 55px;
+  background-size: 125% 100%;
+  background-position: right;
+  box-shadow: 0px 0px 2px 1px rgba(20,20,20,0.4);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 10px;
+}
+
+
+.description{
+  width: 250px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.card-outer-div {
+  margin: 30px auto;
+  height: 550px;
+}
+`;
+
 const ProjectsCard = ({ projectInfo, openProjectModal }) => {
+  let mobileView;
+  if (typeof window !== 'undefined') {
+    mobileView = window.innerWidth < 1080;
+  }
+
   if (projectInfo) {
+    if (!mobileView) {
+      return (
+        <div className="card-outer-div">
+          <div className="card">
+            <div className="front" style={{ backgroundImage: `linear-gradient(180deg, rgba(92,91,94,0) 0%, ${projectInfo.color} 100%)` }}>
+              <h1 className="project-card-title">{projectInfo.name}</h1>
+              <div className="description">{projectInfo.description}</div>
+            </div>
+            <div
+              className="right"
+              onClick={() => openProjectModal(projectInfo)}
+              style={{ backgroundImage: `linear-gradient(180deg, ${projectInfo.color} 0%, rgba(225,225,225,1) 100%)` }}
+            >
+              <h1 className="project-card-title">{projectInfo.name}</h1>
+              <ul>
+                {projectInfo.technologies.map((technology) => (
+                  <li key={technology}>{technology}</li>
+                ))}
+              </ul>
+              <a href={projectInfo.githubLink} target="_blank" rel="noreferrer noopener" onClick={(e) => e.stopPropagation()}>
+                <button type="button" style={{ backgroundColor: `${projectInfo.color}`, color: 'black' }}>Source Code</button>
+              </a>
+            </div>
+          </div>
+          <div className="img-wrapper">
+            <img src={projectInfo.longThing} alt={projectInfo.name} className="flip-image" />
+          </div>
+          <style>{desktopCardStyle}</style>
+        </div>
+      );
+    }
+
     return (
       <div className="card-outer-div">
         <div className="card">
-          <div className="front" style={{ backgroundImage: `linear-gradient(180deg, rgba(92,91,94,0) 0%, ${projectInfo.color} 100%)` }}>
-            <h1 className="project-card-title">{projectInfo.name}</h1>
-            <div className="description">{projectInfo.description}</div>
-          </div>
-          <div
-            className="right"
-            onClick={() => openProjectModal(projectInfo)}
-            style={{ backgroundImage: `linear-gradient(180deg, ${projectInfo.color} 0%, rgba(225,225,225,1) 100%)` }}
-          >
+          <div className="front" style={{ backgroundImage: `linear-gradient(180deg, ${projectInfo.color} 0%, rgba(92,91,94,0) 100%)` }} onClick={() => openProjectModal(projectInfo)}>
             <h1 className="project-card-title">{projectInfo.name}</h1>
             <ul>
               {projectInfo.technologies.map((technology) => (
                 <li key={technology}>{technology}</li>
               ))}
             </ul>
+            <div className="description">{projectInfo.description}</div>
             <a href={projectInfo.githubLink} target="_blank" rel="noreferrer noopener" onClick={(e) => e.stopPropagation()}>
               <button type="button" style={{ backgroundColor: `${projectInfo.color}`, color: 'black' }}>Source Code</button>
             </a>
           </div>
         </div>
-        <div className="img-wrapper">
-          <img src={projectInfo.longThing} alt={projectInfo.name} className="flip-image" />
-        </div>
-        <style>{cardStyle}</style>
+        <style>{mobileCardStyle}</style>
       </div>
     );
   }

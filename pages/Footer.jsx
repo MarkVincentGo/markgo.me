@@ -19,7 +19,7 @@ const footerStyle = `
 }
 
 .links {
-  width: 20%;
+  width: 40%;
   border-top: 1px solid white;
   padding-top: 30px;
   display: flex;

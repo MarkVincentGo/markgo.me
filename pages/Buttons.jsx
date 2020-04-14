@@ -18,6 +18,7 @@ const style = `
   fill: white;
   background-color: rgba(0,0,0,0.6);
   text-decoration: none;
+  margin-left: 20px;
 }
 .btn-portfolio:hover {
   background-color: rgba(225,225,225,0.8);
@@ -37,7 +38,7 @@ const style = `
 const Buttons = ({ info }) => {
   let isMobile = false;
   if (typeof window !== 'undefined') {
-    isMobile = window.innerWidth < 480;
+    isMobile = window.innerWidth < 940;
   }
 
   return (

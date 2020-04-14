@@ -33,7 +33,7 @@ const style = `
 
 .btn-container {
   display: flex;
-  width: 60%;
+  width: 50%;
   max-width: 600px;
   flex-direction: row;
   justify-content: space-between;
@@ -52,5 +52,6 @@ const Header = ({ portfolioButtons }) => (
     </div>
   </div>
 );
+
 
 export default Header;

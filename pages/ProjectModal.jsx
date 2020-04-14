@@ -5,12 +5,11 @@ import React from 'react';
 
 const modalStyle = `
 .modal-container {
-  display: flex;
   font-family: "Montserrat", sans-serif;
 }
 
 .modal-button {
-  width: 200px;
+  width: 180px;
   border: 1px solid black;
   padding: 10px;
   border-radius: 55px;
@@ -24,6 +23,12 @@ const modalStyle = `
   linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%);
   color: black;
   box-shadow: 0px 0px 3px 2px rgba(20,20,20,0.4);
+}
+`;
+
+const desktopSpecificStyles = `
+.modal-container {
+  display: flex;
 }
 
 .modal-button:hover {
@@ -48,7 +53,31 @@ const modalStyle = `
 }
 `;
 
+const mobileSpecificStyles = `
+.modal-container: {
+  display: column;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+}
+
+.modal-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+`;
+
 const ProjectModal = ({ selectedProject, closeProjectModal }) => {
+  let mobileView;
+  if (typeof window !== 'undefined') {
+    mobileView = window.innerWidth < 1080;
+  }
+
   if (selectedProject) {
     return (
       <div className="modal-container">
@@ -58,6 +87,9 @@ const ProjectModal = ({ selectedProject, closeProjectModal }) => {
           <a className="modal-button" href={selectedProject.githubLink} target="_blank" rel="noreferrer noopener">Source Code</a>
           <div className="modal-button" onClick={closeProjectModal}>Exit</div>
         </div>
+        {mobileView
+          ? <style>{mobileSpecificStyles}</style>
+          : <style>{desktopSpecificStyles}</style>}
         <style>{modalStyle}</style>
       </div>
     );
