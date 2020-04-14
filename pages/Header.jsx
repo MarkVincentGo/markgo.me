@@ -75,7 +75,7 @@ const Header = ({ portfolioButtons }) => (
   <div>
     <div className="video-box">
       <video className="video" autoPlay loop muted playsinline>
-        <source src="Header.mp4" type="video/mp4" />
+        <source src="header.mp4" type="video/mp4" />
       </video>
       <div className="video-overlay">
         <div className="name info">Mark Vincent Go</div>
