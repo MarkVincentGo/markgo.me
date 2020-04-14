@@ -1,20 +1,53 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const footerStyle = `
-.container {
+.footer-container {
   width: 100%;
-  height: 250px;
-  background: rgba(0,0,255, 1);
+  height: 100px;
+  background:     
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.5)),
+    linear-gradient(217deg, rgba(255,0,0,.7), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.7), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.7), rgba(0,0,255,0) 70.71%);
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.links {
+  width: 20%;
+  border-top: 1px solid white;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
 }
 `;
 
-const Footer = () => {
-  return (
-    <div className="container">
-      Footer
-      <style>{footerStyle}</style>
-    </div>
-  );
+const Footer = ({ portfolioButtons }) => {
+  if (portfolioButtons) {
+    return (
+      <div className="footer-container">
+        <div className="links left">
+          {portfolioButtons.map((site) => (
+            <a className="footer-link" href={site.link}>{site.name}</a>))}
+        </div>
+        <div className="links">
+          <div>Site by MARK VINCENT GO</div>
+        </div>
+        <style>{footerStyle}</style>
+      </div>
+    );
+  }
+  return null;
 };
 
 export default Footer;

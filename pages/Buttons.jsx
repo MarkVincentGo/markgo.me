@@ -11,6 +11,7 @@ const style = `
   border-radius: 30px;
   color: white;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   color: white;
@@ -34,10 +35,15 @@ const style = `
 `;
 
 const Buttons = ({ info }) => {
+  let isMobile = false;
+  if (typeof window !== 'undefined') {
+    isMobile = window.innerWidth < 480;
+  }
+
   return (
-    <a className="btn-portfolio" href={info.link} target="_blank">
-      <svg className="svg hover" viewBox="0 0 24 24" aria-hidden="true"><path d={info.logoPath} /></svg>
-      <h4 className="btn-name hover">{info.name}</h4>
+    <a className="btn-portfolio" href={info ? info.link : '#'} target="_blank">
+      <svg className="svg hover" viewBox="0 0 24 24" aria-hidden="true"><path d={info ? info.logoPath : ''} /></svg>
+      { isMobile ? null : <h4 className="btn-name hover">{info ? info.name : 'null'}</h4> }
       <style>{style}</style>
     </a>
   );

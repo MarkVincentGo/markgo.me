@@ -4,17 +4,18 @@ import Header from './Header';
 import Footer from './Footer';
 
 const layoutStyle = {
+  padding: 30,
   border: '1px solid #DDD',
   backgroundColor: '#e1e1e1',
   fontFamily: 'Montserrat, sans-serif',
   textAlign: 'center',
 };
 
-const Layout = ({ children }) => (
+const Layout = ({ children, portfolioButtons }) => (
   <div style={layoutStyle}>
-    <Header />
+    <Header portfolioButtons={portfolioButtons} />
     {children}
-    <Footer />
+    <Footer portfolioButtons={portfolioButtons} />
   </div>
 );
 
