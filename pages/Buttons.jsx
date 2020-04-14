@@ -18,7 +18,7 @@ const style = `
   fill: white;
   background-color: rgba(0,0,0,0.6);
   text-decoration: none;
-  margin-left: 20px;
+  margin-left:not(:first-child) 20px;
 }
 .btn-portfolio:hover {
   background-color: rgba(225,225,225,0.8);

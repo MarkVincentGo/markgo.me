@@ -49,7 +49,7 @@ const mobileSpecificStyles = `
 
 .summary-container {
   text-align: left;
-  padding: 0 20px;
+  padding: 0 10px;
   width: 100%;
   height: 60%;
 }

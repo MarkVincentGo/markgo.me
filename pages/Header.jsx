@@ -71,24 +71,35 @@ const style = `
 }
 `;
 
-const Header = ({ portfolioButtons }) => (
-  <div>
-    <div className="video-box">
-      <video className="video" autoPlay loop muted playsinline>
-        <source src="header.mp4" type="video/mp4" />
-      </video>
-      <div className="video-overlay">
-        <div className="name info">Mark Vincent Go</div>
-        <h3 className="info">Full-Stack Software Engineer</h3>
-        <div className="btn-container">
-          {portfolioButtons ? portfolioButtons.map((info) => (
-            <Button key={JSON.stringify(info)} info={info} />)) : null}
+const Header = ({ portfolioButtons }) => {
+  let mobileView;
+  if (typeof window !== 'undefined') {
+    mobileView = window.innerWidth < 500;
+  }
+
+  const videoComponent = (
+    <video className="video" autoPlay loop muted playsinline>
+      <source src="header.mp4" type="video/mp4" />
+    </video>
+  )
+
+  return (
+    <div>
+      <div className="video-box">
+        { mobileView ? <img height="100%" src="squares.jpg" alt="if-on-mobile" /> : videoComponent}
+        <div className="video-overlay">
+          <div className="name info">Mark Vincent Go</div>
+          <h3 className="info">Full-Stack Software Engineer</h3>
+          <div className="btn-container">
+            {portfolioButtons ? portfolioButtons.map((info) => (
+              <Button key={JSON.stringify(info)} info={info} />)) : null}
+          </div>
         </div>
+        <style>{style}</style>
       </div>
-      <style>{style}</style>
     </div>
-  </div>
-);
+  );
+};
 
 
 export default Header;

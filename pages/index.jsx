@@ -13,6 +13,7 @@ const fontImport = `
   src: url('/fonts/Montserrat-Regular.ttf');
   src: url('/fonts/Montserrat-Black.ttf');
   src: url('/fonts/Montserrat-ExtraLight.ttf');
+  font-display: swap;
 }
 
 .ReactModal__Overlay {
