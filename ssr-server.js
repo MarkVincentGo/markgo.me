@@ -12,12 +12,13 @@ server.prepare()
   .then(() => {
     const app = express();
     app.use(express.json());
+    
+    app.get('/.well-known/acme-challenge/JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg', (req, res) => {
+      res.send('JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg.XSANxVJErCD31XyJ1pGr-dhc08KOZ0vZdD69XBORJJA');
+    });
 
     app.get('*', (req, res) => {
       return handle(req, res);
-    });
-    app.get('.well-known/acme-challenge/JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg', (req, res) => {
-      res.send('JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg.XSANxVJErCD31XyJ1pGr-dhc08KOZ0vZdD69XBORJJA');
     });
     app.listen(port, (err) => {
       if (err) throw err;

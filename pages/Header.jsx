@@ -78,10 +78,10 @@ const Header = ({ portfolioButtons }) => {
   }
 
   const videoComponent = (
-    <video className="video" autoPlay loop muted playsinline>
+    <video className="video" autoPlay loop muted playsInline>
       <source src="header.mp4" type="video/mp4" />
     </video>
-  )
+  );
 
   return (
     <div>
