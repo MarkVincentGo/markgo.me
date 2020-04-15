@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ssr-server.js",
+    "start": "node ssr-server.js -p $PORT",
     "dev": "next",
     "build": "next build",
     "heroku-postbuild": "npm run build"
