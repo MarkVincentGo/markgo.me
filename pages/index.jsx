@@ -64,8 +64,8 @@ export default class index extends Component {
           technologies: ['HTML5', 'CSS', 'JavaScript', 'React | Redux', 'Vue'],
         },
         {
-          stack: 'Back-End',
-          technologies: ['NodeJS', 'Express'],
+          stack: 'Server',
+          technologies: ['NodeJS', 'Express', 'Python'],
         },
         {
           stack: 'Database',
