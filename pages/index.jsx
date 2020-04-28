@@ -55,7 +55,7 @@ export default class index extends Component {
         {
           name: 'Resume',
           logoPath: 'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
-          link: '/MG_SE_Resume.pdf',
+          link: '/Mark_Go_Resume.pdf',
         },
       ],
       technologiesInfo: [
@@ -83,7 +83,7 @@ export default class index extends Component {
           color: '#bd3754',
           githubLink: 'https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour',
           longThing: '/house-key.png',
-          technologies: ['React', 'Styled-Components', 'Docker', 'Express | NodeJS, MySQL'],
+          technologies: ['React', 'Docker', 'Express | NodeJS, MySQL'],
           demo: '/FECDemo.mp4',
         },
         {
@@ -117,7 +117,7 @@ export default class index extends Component {
           name: 'Motion Booth',
           description: 'Live-Photo Strip iOS Application',
           color: '#3fbf8a',
-          githubLink: '',
+          githubLink: 'https://github.com/MarkVincentGo/MovieBooth',
           longThing: 'camera-tripod.png',
           technologies: ['React Native', 'XCode', 'Express | NodeJS'],
           demo: '',
@@ -128,6 +128,15 @@ export default class index extends Component {
           color: '#d19234',
           githubLink: '',
           longThing: 'pencil.png',
+          technologies: ['React', 'Express | NodeJS', 'MaterialUI'],
+          demo: '',
+        },
+        {
+          name: 'Eat Ladle',
+          description: 'Restaurant Food Subscription iOS Application',
+          color: 'pink',
+          githubLink: 'https://github.com/ReactWare/EatLadleApp',
+          longThing: 'ladle.png',
           technologies: ['React', 'Express | NodeJS', 'MaterialUI'],
           demo: '',
         },
