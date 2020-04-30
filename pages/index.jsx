@@ -137,7 +137,7 @@ export default class index extends Component {
           color: 'pink',
           githubLink: 'https://github.com/ReactWare/EatLadleApp',
           longThing: 'ladle.png',
-          technologies: ['React', 'Express | NodeJS', 'MaterialUI'],
+          technologies: ['React Native', 'Express | NodeJS', 'Google Firebase'],
           demo: '',
         },
       ],
