@@ -7,7 +7,7 @@ const style = `
   height: 50px;
   min-width: 50px;
   width: 150px;
-  border: 1px solid white;
+
   border-radius: 30px;
   color: white;
   display: flex;

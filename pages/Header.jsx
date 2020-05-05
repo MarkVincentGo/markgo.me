@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Button from './Buttons';
+import Background from './HeaderBackground';
 
 const style = `
 .header {
@@ -72,21 +73,23 @@ const style = `
 `;
 
 const Header = ({ portfolioButtons }) => {
-  let mobileView;
-  if (typeof window !== 'undefined') {
-    mobileView = window.innerWidth < 500;
-  }
+  // let mobileView;
+  // if (typeof window !== 'undefined') {
+  //   mobileView = window.innerWidth < 500;
+  // }
 
-  const videoComponent = (
-    <video className="video" autoPlay loop muted playsInline>
-      <source src="https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/header.mp4" type="video/mp4" />
-    </video>
-  );
+  // thinking about removing this component to replace with css bubble animation
+  // const videoComponent = (
+  //   <video className="video" autoPlay loop muted playsInline>
+  //     <source src="https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/header.mp4" type="video/mp4" />
+  //   </video>
+  // );
 
   return (
     <div>
       <div className="video-box">
-        { mobileView ? <img height="100%" src="squares.jpg" alt="if-on-mobile" /> : videoComponent}
+        {/* { mobileView ? <img height="100%" src="squares.jpg" alt="if-on-mobile" /> : videoComponent} */}
+        <Background />
         <div className="video-overlay">
           <div className="name info">Mark Vincent Go</div>
           <h3 className="info">Full-Stack Software Engineer</h3>

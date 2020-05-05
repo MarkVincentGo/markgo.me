@@ -60,7 +60,10 @@ const desktopSpecificStyles = `
 }
 
 .modal-project-description {
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 85%;
+
 }
 `;
 
@@ -101,7 +104,7 @@ const ProjectModal = ({ selectedProject, closeProjectModal }) => {
           )
           : <img className="modal-left project-image" alt="project-demo" src={selectedProject.demo.length ? selectedProject.demo : 'app-under-construction.jpg'} /> }
         <div className="modal-right">
-          <div className="modal-project-description">{selectedProject.description}</div>
+          <div className="modal-project-description">{selectedProject.modalDescription}</div>
           <a className="modal-button" href={selectedProject.githubLink} target="_blank" rel="noreferrer noopener">Source Code</a>
           <div className="modal-button" onClick={closeProjectModal}>Exit</div>
         </div>
