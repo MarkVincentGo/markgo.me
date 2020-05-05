@@ -28,6 +28,7 @@ const modalStyle = `
 
 .video {
   width: 100%;
+  height: 500px
 }
 `;
 

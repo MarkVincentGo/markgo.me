@@ -114,13 +114,13 @@ export default class index extends Component {
           demo: '',
         },
         {
-          name: 'Motion Booth',
+          name: 'Movie Booth',
           description: 'Live-Photo Strip iOS Application',
           color: '#3fbf8a',
           githubLink: 'https://github.com/MarkVincentGo/MovieBooth',
           longThing: 'camera-tripod.png',
           technologies: ['React Native', 'XCode', 'Express | NodeJS'],
-          demo: '',
+          demo: '/MovieBooth.mp4',
         },
         {
           name: 'Resume Roasters',
