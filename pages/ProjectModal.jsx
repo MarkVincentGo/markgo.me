@@ -58,6 +58,10 @@ const desktopSpecificStyles = `
   justify-content: center;
   align-items: center;
 }
+
+.modal-project-description {
+  text-align: center;
+}
 `;
 
 const mobileSpecificStyles = `
@@ -97,7 +101,7 @@ const ProjectModal = ({ selectedProject, closeProjectModal }) => {
           )
           : <img className="modal-left project-image" alt="project-demo" src={selectedProject.demo.length ? selectedProject.demo : 'app-under-construction.jpg'} /> }
         <div className="modal-right">
-          <div>This is my project</div>
+          <div className="modal-project-description">{selectedProject.description}</div>
           <a className="modal-button" href={selectedProject.githubLink} target="_blank" rel="noreferrer noopener">Source Code</a>
           <div className="modal-button" onClick={closeProjectModal}>Exit</div>
         </div>

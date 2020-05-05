@@ -79,7 +79,7 @@ const Header = ({ portfolioButtons }) => {
 
   const videoComponent = (
     <video className="video" autoPlay loop muted playsInline>
-      <source src="header.mp4" type="video/mp4" />
+      <source src="https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/header.mp4" type="video/mp4" />
     </video>
   );
 

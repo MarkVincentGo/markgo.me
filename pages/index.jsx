@@ -84,7 +84,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/Big-Tunas/Bluefin-Service-ScheduleTour',
           longThing: '/house-key.png',
           technologies: ['React', 'Docker', 'Express | NodeJS, MySQL'],
-          demo: '/FECDemo.mp4',
+          demo: 'https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/FECDemo.mp4',
         },
         {
           name: 'Bon-App-Etit',
@@ -102,7 +102,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/MarkVincentGo/What2Cook',
           longThing: '/spatula.png',
           technologies: ['Vue', 'CSS', 'Express | NodeJS', 'MongoDB'],
-          demo: '/MVPDemo.mp4',
+          demo: 'https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/MVPDemo.mp4',
         },
         {
           name: 'DomOnion',
@@ -120,7 +120,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/MarkVincentGo/MovieBooth',
           longThing: 'camera-tripod.png',
           technologies: ['React Native', 'XCode', 'Express | NodeJS'],
-          demo: '/MovieBooth.mp4',
+          demo: 'https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/MovieBooth.mp4',
         },
         {
           name: 'Resume Roasters',
