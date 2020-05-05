@@ -4,7 +4,7 @@ import React from 'react';
 const footerStyle = `
 .footer-container {
   width: 100%;
-  height: 100px;
+  height: 150px;
   background:     
     linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.5)),
     linear-gradient(217deg, rgba(255,0,0,.7), rgba(255,0,0,0) 70.71%),
@@ -30,6 +30,16 @@ const footerStyle = `
   color: white;
   text-decoration: none;
 }
+
+.footer-svg {
+  height: 50px;
+  fill: rgba(255,255,255,0.7);
+}
+
+.footer-svg:hover {
+  fill: rgba(0,0,0,0.7);
+  transform: scale(1.3);
+}
 `;
 
 const Footer = ({ portfolioButtons }) => {
@@ -38,7 +48,9 @@ const Footer = ({ portfolioButtons }) => {
       <div className="footer-container">
         <div className="links left">
           {portfolioButtons.map((site) => (
-            <a className="footer-link" target="_blank" rel="noreferrer noopener" href={site.link}>{site.name}</a>))}
+            <a className="footer-link" target="_blank" rel="noreferrer noopener" href={site.link}>
+              <svg className="footer-svg" viewBox="0 0 24 24" aria-hidden="true"><path d={site.logoPath} /> </svg>
+              </a>))}
         </div>
         <div className="links">
           <div>Site by MARK VINCENT GO</div>

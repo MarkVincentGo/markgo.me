@@ -9,6 +9,7 @@ const layoutStyle = {
   backgroundColor: '#e1e1e1',
   fontFamily: 'Montserrat, sans-serif',
   textAlign: 'center',
+  overflow: 'hidden',
 };
 
 

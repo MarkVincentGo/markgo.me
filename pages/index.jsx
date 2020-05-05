@@ -65,7 +65,7 @@ export default class index extends Component {
         },
         {
           stack: 'Server',
-          technologies: ['NodeJS | Express', 'Python', 'Django'],
+          technologies: ['NodeJS | Express', 'Python | Django'],
         },
         {
           stack: 'Database',

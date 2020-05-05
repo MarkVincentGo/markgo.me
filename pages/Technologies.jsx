@@ -1,9 +1,17 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import TechnologiesCard from './TechnologiesCard';
+import Background from './HeaderBackground';
 
 const technologiesStyle = `
+.outer-tech-container {
+  overflow: hidden;
+  position: relative;
+}
+
 .technologies-container {
+  position: absolute;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,8 +37,8 @@ const desktopSpecificStyles = `
     linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%),
-    url(squares.jpg) center;
+    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%);
+  overflow: hidden;
 }
 
 .tech-cards-container {
@@ -43,6 +51,10 @@ const desktopSpecificStyles = `
 `;
 
 const mobileSpecificStyles = `
+.outer-tech-container {
+  height: 1500px;
+}
+
 .technologies-container {
   height: 1500px;
   background:  
@@ -52,9 +64,7 @@ const mobileSpecificStyles = `
     linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     linear-gradient(217deg, rgba(255,0,0,.3), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%),
-    url(squares.jpg) center;
-  
+    linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%);
 }
 
 
@@ -73,17 +83,20 @@ const Technologies = ({ stacks }) => {
   }
 
   return (
-    <div className="technologies-container">
-      <div className="title">Technologies</div>
-      <div className="tech-cards-container">
-        {stacks ? stacks.map((card) => (
-          <TechnologiesCard key={JSON.stringify(card)} cardInfo={card} />
-        )) : null}
+    <div className="outer-tech-container">
+        <Background />
+      <div className="technologies-container">
+        <div className="title">Technologies</div>
+        <div className="tech-cards-container">
+          {stacks ? stacks.map((card) => (
+            <TechnologiesCard key={JSON.stringify(card)} cardInfo={card} />
+            )) : null}
+        </div>
+        { mobileView
+          ? <style>{mobileSpecificStyles}</style>
+          : <style>{desktopSpecificStyles}</style>}
+        <style>{technologiesStyle}</style>
       </div>
-      { mobileView
-        ? <style>{mobileSpecificStyles}</style>
-        : <style>{desktopSpecificStyles}</style>}
-      <style>{technologiesStyle}</style>
     </div>
   );
 };

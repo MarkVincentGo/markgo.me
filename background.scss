@@ -1,8 +1,8 @@
 .header-background {
-  width: 100vw;
-  height: 95vh;
+  width: 100%;
+  height: 100vh;
   background: #3E1E68;
-  position: absolute;
+  overflow: hidden;
 }
 
 $particleSize: 25vmin;
@@ -35,6 +35,12 @@ $amount: 20;
       $x: if(random() > 0.5, -1, 1);
       box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
     }
+  }
+}
+
+@media (max-width: 1080px) {
+  .header-background {
+    height: 200vh;
   }
 }
 
