@@ -94,7 +94,7 @@ export default class index extends Component {
           githubLink: 'https://github.com/MarkVincentGo/reservation-service',
           longThing: '/utensil.png',
           technologies: ['AWS EC2', 'NGINX', 'Express | NodeJS', 'Docker', 'PostgreSQL'],
-          demo: '',
+          demo: 'https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/header.mp4',
           modalDescription: 'Back-end for a restaurant reservation service, scaling client requests per second to 10,000 by utilizing an NGINX load balancer, horizontal scaling, REDIS memory caching, and database query optimizations. It is all in the back-end so I don\'t have a demo available!',
         },
         {
