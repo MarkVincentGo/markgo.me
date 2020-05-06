@@ -9,6 +9,7 @@ const techCardStyle = `
   background-color: rgba(225,225,225, 0.85);
   box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.66);
   padding: 30px;
+  height: 270px;
 }
 
 .grow { 
@@ -32,27 +33,16 @@ const techCardStyle = `
   justify-content: start;
   font-size: 18px;
 }
-`;
 
-const desktopSpecificStyles = `
-.tech-card {
-  height: 270px;
-}
-`;
-
-const mobileSpecificStyles = `
-.tech-card {
-  height: 200px;
+@media (max-width: 1080px) {
+  .tech-card {
+    height: 210px;
+  }
 }
 `;
 
 
 const TechnologiesCard = ({ cardInfo }) => {
-  let mobileView;
-  if (typeof window !== 'undefined') {
-    mobileView = window.innerWidth < 1080;
-  }
-
   if (cardInfo) {
     return (
       <div className="tech-card grow">
@@ -62,9 +52,6 @@ const TechnologiesCard = ({ cardInfo }) => {
             <div key={technology}>{technology}</div>
           ))}
         </div>
-        {mobileView
-          ? <style>{mobileSpecificStyles}</style>
-          : <style>{desktopSpecificStyles}</style>}
         <style>{techCardStyle}</style>
       </div>
     );

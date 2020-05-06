@@ -49,8 +49,11 @@ const Footer = ({ portfolioButtons }) => {
         <div className="links left">
           {portfolioButtons.map((site) => (
             <a className="footer-link" target="_blank" rel="noreferrer noopener" href={site.link}>
-              <svg className="footer-svg" viewBox="0 0 24 24" aria-hidden="true"><path d={site.logoPath} /> </svg>
-              </a>))}
+              <svg className="footer-svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d={site.logoPath} />
+              </svg>
+            </a>
+          ))}
         </div>
         <div className="links">
           <div>Site by MARK VINCENT GO</div>

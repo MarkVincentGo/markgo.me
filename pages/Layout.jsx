@@ -12,7 +12,6 @@ const layoutStyle = {
   overflow: 'hidden',
 };
 
-
 const Layout = ({ children, portfolioButtons }) => (
   <div style={layoutStyle}>
     <Header portfolioButtons={portfolioButtons} />

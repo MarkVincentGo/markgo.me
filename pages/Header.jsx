@@ -77,7 +77,7 @@ const Header = ({ portfolioButtons }) => {
     <div>
       <div className="video-box">
         {/* { mobileView ? <img height="100%" src="squares.jpg" alt="if-on-mobile" /> : videoComponent} */}
-        <Background style={backgroundStyle}/>
+        <Background style={backgroundStyle} />
         <div className="video-overlay">
           <div className="name info">Mark Vincent Go</div>
           <h3 className="info">Full-Stack Software Engineer</h3>
