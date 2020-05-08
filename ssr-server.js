@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const express = require('express');
 const next = require('next');
+const path = require('path');
+const favicon = require('serve-favicon');
 
 const port = process.env.PORT || 3000;
 
@@ -12,7 +14,7 @@ server.prepare()
   .then(() => {
     const app = express();
     app.use(express.json());
-    
+    app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
     app.get('/.well-known/acme-challenge/JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg', (req, res) => {
       res.send('JqQLkBcjNhU6smd-x-r_tG1o4kOfEUe-Ger6IkMA7Eg.XSANxVJErCD31XyJ1pGr-dhc08KOZ0vZdD69XBORJJA');
     });

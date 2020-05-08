@@ -14,12 +14,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" type="image/png" href="/favicon.png" />
           <meta charSet="utf-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
-
         </Head>
         <body>
           <Main />
