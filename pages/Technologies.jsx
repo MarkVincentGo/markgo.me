@@ -29,7 +29,6 @@ const technologiesStyle = `
     linear-gradient(127deg, rgba(0,255,0,.3), rgba(0,255,0,0) 70.71%),
     linear-gradient(336deg, rgba(0,0,255,.3), rgba(0,0,255,0) 70.71%);
   overflow: hidden;
-  border: 1px solid red;
 }
 
 .title {

@@ -5,6 +5,7 @@ import React from 'react';
 const aboutStyle = `
 .about-container {
   margin-top: 75px;
+  height: auto;
 }
 
 .about-title {
@@ -14,12 +15,6 @@ const aboutStyle = `
 
 .my-summary {
   font-size: 20px;
-}
-`;
-
-const desktopSpecificStyles = `
-.about-container {
-  height: 75vh;
 }
 
 .content {
@@ -42,29 +37,29 @@ const desktopSpecificStyles = `
   height: auto;
   margin: 0 auto;
 }
-`;
 
-const mobileSpecificStyles = `
-.about-container {
-  margin-bottom: 100px;
-}
-
-.summary-container {
-  text-align: left;
-  padding: 0 10px;
-  width: 100%;
-  height: 60%;
-}
-
-.image-container {
-  width: 70%;
-  height: 40%;
-  margin: 0 auto;
-}
-
-#my-image {
-  max-width: 50%;
-  margin: 0 auto;
+@media (max-width: 1080px) {
+  .about-container {
+    margin-bottom: 100px;
+  }
+  
+  .summary-container {
+    text-align: left;
+    padding: 0 10px;
+    width: 100%;
+    height: 60%;
+  }
+  
+  .image-container {
+    width: 70%;
+    height: 40%;
+    margin: 0 auto;
+  }
+  
+  #my-image {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 `;
 
@@ -110,9 +105,6 @@ const About = () => {
           <img src="./Me.jpg" alt="it-me" id="my-image" />
         </div>
       </div>
-      { mobileView
-        ? <style>{mobileSpecificStyles}</style>
-        : <style>{desktopSpecificStyles}</style>}
       <style>{aboutStyle}</style>
     </div>
   );
