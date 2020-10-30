@@ -55,28 +55,38 @@ export default class index extends Component {
         {
           name: 'Resume',
           logoPath: 'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
-          link: '/Mark_Go_Resume.pdf',
+          link: '/Mark_Go_Resume_2.pdf',
         },
       ],
       technologiesInfo: [
         {
           stack: 'Front-End',
-          technologies: ['HTML5', 'CSS | SCSS', 'JavaScript', 'React | Redux', 'Vue'],
+          technologies: ['HTML5', 'CSS | SCSS', 'JavaScript | Typescript', 'React | Redux', 'Vue'],
         },
         {
           stack: 'Server',
-          technologies: ['NodeJS | Express', 'Python | Django'],
+          technologies: ['NodeJS | Express', 'Python | Django', 'Golang'],
         },
         {
           stack: 'Database',
-          technologies: ['MySql', 'MongoDB', 'PostgreSQL', 'Firebase', 'Cassandra', 'Redis'],
+          technologies: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase', 'Redis'],
         },
         {
           stack: 'Deployment',
-          technologies: ['AWS EC2 | S3', 'NGINX', 'Docker', 'Git | GitHub'],
+          technologies: ['AWS EC2 | S3', 'NGINX', 'Docker', 'Git | GitHub', 'OpenShift'],
         },
       ],
       projectsInfo: [
+        {
+          name: 'VLANG',
+          description: 'Visual Language and Calclator',
+          color: '#0d77f4',
+          githubLink: 'https://github.com/MarkVincentGo/VisLang',
+          longThing: '/keyboard.png',
+          technologies: ['React', 'D3.js', 'Golang', 'MongoDB'],
+          demo: 'https://markgowebsite.s3-us-west-1.amazonaws.com/markgome/VLANGDemo.mp4',
+          modalDescription: 'Front-end for a house tour scheduling component including stateful scrolling using only React, without component libraries, and implemented the front end to a chat service with house agents.',
+        },
         {
           name: 'Big Tuna',
           description: 'House Tour Scheduling Application',
